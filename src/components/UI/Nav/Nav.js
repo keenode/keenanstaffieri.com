@@ -8,7 +8,9 @@ const nav = props => (
   <nav className={styles.Nav}>
     <ul>
       <NavItem link="/" exact>Home</NavItem>
+      <NavItem link="/work">Work</NavItem>
       <NavItem link="/about">About</NavItem>
+      <NavItem link="/contact">Contact</NavItem>
     </ul>
   </nav>
 )
