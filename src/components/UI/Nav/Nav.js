@@ -7,10 +7,10 @@ import styles from './Nav.css'
 const nav = props => (
   <nav className={styles.Nav}>
     <ul className={styles.NavList}>
-      <NavItem link="/" exact>Home</NavItem>
-      <NavItem link="/work">Work</NavItem>
-      <NavItem link="/about">About</NavItem>
-      <NavItem link="/contact">Contact</NavItem>
+      <NavItem link="/" exact>home</NavItem>
+      <NavItem link="/work">work</NavItem>
+      <NavItem link="/about">about</NavItem>
+      <NavItem link="/contact">contact</NavItem>
     </ul>
   </nav>
 )

@@ -48,13 +48,24 @@ table {
 }
 
 /*
- * - Base Styles -
+ * - Variables -
  */
+
+/*
+  TODO: Come up with color pallet. 
+*/
 
 :root {
   /* Colors */
-  --color-white: #FFFFFF;
-  --color-black: #1a1a1a;
+  --color-white: #FBFFFE;
+  --color-black: #11151C;
+  --color-gray-subtle: #E5E8E7;
+  --color-gray-light: #CED1D0;
+  --color-gray: #2E2E3A;
+  --color-blue: #2374AB;
+  --color-orange: #D66853;
+  --color-purple: #893168;
+
   /* Fonts */
   --fontFamily-serif: 'Alice', serif;
   --fontFamily-sans-serif: 'Kanit', sans-serif;
@@ -62,9 +73,16 @@ table {
   --fontFamily-headings: var(--fontFamily-serif);
 }
 
+/*
+ * - Base Styles -
+ */
+
 body {
   font-family: var(--fontFamily-base);
+  line-height: 1.5;
   background-color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -74,4 +92,8 @@ h4,
 h5,
 h6 {
   font-family: var(--fontFamily-headings);
+}
+
+small {
+  font-size: 75%;
 }

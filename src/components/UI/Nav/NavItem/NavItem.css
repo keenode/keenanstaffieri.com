@@ -1,5 +1,16 @@
 .NavItem a {
-  color: var(--color-white);
   padding: 10px;
+  margin: 0 10px;
+  color: var(--color-white);
+  font-family: var(--fontFamily-serif);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 300ms ease;
+}
+
+.NavItem a.active {
+  opacity: 1;
 }

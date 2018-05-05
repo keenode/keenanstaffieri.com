@@ -6,10 +6,15 @@
 }
 
 .Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   left: 0;
   top: 0;
-  display: flex;
+  padding: 0 5%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Logo {
@@ -19,4 +24,17 @@
 .Logo svg {
   width: 100px;
   height: 100px;
+}
+
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: var(--color-gray-light);
+  font-family: var(--fontFamily-serif);
+  letter-spacing: 1px;
+  background-color: var(--color-black);
+  text-align: center;
 }
