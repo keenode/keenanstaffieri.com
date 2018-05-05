@@ -51,6 +51,11 @@ table {
  * - Base Styles -
  */
 
+:root {
+	--color-white: #FFFFFF;
+	--color-black: #1a1a1a;
+}
+
 body {
-  background-color: #1a1a1a;
+  background-color: var(--color-black);
 }
