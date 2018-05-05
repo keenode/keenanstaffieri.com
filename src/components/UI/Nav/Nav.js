@@ -6,7 +6,7 @@ import styles from './Nav.css'
 
 const nav = props => (
   <nav className={styles.Nav}>
-    <ul>
+    <ul className={styles.NavList}>
       <NavItem link="/" exact>Home</NavItem>
       <NavItem link="/work">Work</NavItem>
       <NavItem link="/about">About</NavItem>

@@ -10,8 +10,10 @@ class Layout extends Component {
   render () {
     return (
       <div className={styles.AppContainer}>
-        <SVGInline svg={ksLogo} />
-        <Nav />
+        <header className={styles.Header}>
+          <SVGInline className={styles.Logo} svg={ksLogo} />
+          <Nav />
+        </header>
         <main className={styles.LayoutContainer}>
           {this.props.children}
         </main>

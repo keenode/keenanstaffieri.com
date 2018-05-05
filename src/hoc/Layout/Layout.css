@@ -2,4 +2,21 @@
 }
 
 .LayoutContainer {
+  margin-top: 100px;
+}
+
+.Header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+
+.Logo {
+  display: inline-block;
+}
+
+.Logo svg {
+  width: 100px;
+  height: 100px;
 }

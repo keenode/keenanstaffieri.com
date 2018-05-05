@@ -1,2 +1,6 @@
 .Nav {
 }
+
+.NavList {
+  display: flex;
+}
