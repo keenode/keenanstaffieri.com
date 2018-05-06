@@ -19,6 +19,14 @@ const work = () => (
         <a className="btn" href="https://www.vizio.com/" target="_blank" rel="noopener noreferrer">Visit Site</a>
       </div>
     </article>
+    <article className={[styles.WorkItem, styles.WorkItem_Left].join(' ')}>
+      {/* Picture element will go here */}
+      <div className={styles.WorkPicture}></div>
+      <div className={styles.WorkBox}>
+        <h3>VIZIO.com</h3>
+        <a className="btn" href="https://www.vizio.com/" target="_blank" rel="noopener noreferrer">Visit Site</a>
+      </div>
+    </article>
   </div>
 )
 

@@ -70,7 +70,7 @@ table {
 
   /* Grid */
   --grid-max-width: 1400px;
-  --grid-padding: 0 20px;
+  --grid-padding: 20px;
 }
 
 /*
@@ -80,7 +80,7 @@ table {
 body {
   color: var(--color-white);
   font-family: var(--fontFamily-base);
-  line-height: 1.5;
+  line-height: 1.75;
   background-color: var(--color-black);
   -webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -96,9 +96,13 @@ h6 {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 80px;
   letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 small {
