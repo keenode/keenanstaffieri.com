@@ -51,10 +51,6 @@ table {
  * - Variables -
  */
 
-/*
-  TODO: Come up with color pallet. 
-*/
-
 :root {
   /* Colors */
   --color-white: #FBFFFE;
@@ -71,6 +67,10 @@ table {
   --fontFamily-sans-serif: 'Kanit', sans-serif;
   --fontFamily-base: var(--fontFamily-sans-serif);
   --fontFamily-headings: var(--fontFamily-serif);
+
+  /* Grid */
+  --grid-max-width: 1400px;
+  --grid-padding: 0 20px;
 }
 
 /*
@@ -78,6 +78,7 @@ table {
  */
 
 body {
+  color: var(--color-white);
   font-family: var(--fontFamily-base);
   line-height: 1.5;
   background-color: var(--color-black);
@@ -92,6 +93,12 @@ h4,
 h5,
 h6 {
   font-family: var(--fontFamily-headings);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 80px;
+  letter-spacing: 2px;
 }
 
 small {

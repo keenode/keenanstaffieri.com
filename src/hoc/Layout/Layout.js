@@ -12,10 +12,12 @@ class Layout extends Component {
     return (
       <div className={styles.AppContainer}>
         <header className={styles.Header}>
-          <NavLink to="/">
-            <SVGInline className={styles.Logo} svg={ksLogo} />
-          </NavLink>
-          <Nav />
+            <div className={styles.HeaderContainer}>
+            <NavLink to="/">
+              <SVGInline className={styles.Logo} svg={ksLogo} />
+            </NavLink>
+            <Nav />
+          </div>
         </header>
         <main className={styles.LayoutContainer}>
           {this.props.children}

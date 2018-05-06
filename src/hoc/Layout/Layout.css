@@ -6,15 +6,20 @@
 }
 
 .Header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   left: 0;
   top: 0;
-  padding: 0 5%;
   width: 100%;
-  box-sizing: border-box;
+}
+
+.HeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--grid-padding);
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--grid-max-width);
 }
 
 .Logo {

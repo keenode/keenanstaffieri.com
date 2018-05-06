@@ -1,4 +1,6 @@
 .Nav {
+  position: relative;
+  right: -20px;
 }
 
 .NavList {
