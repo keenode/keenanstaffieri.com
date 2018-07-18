@@ -16,6 +16,7 @@ const about = () => (
     <ul>
       <li>React/Redux</li>
     </ul>
+    <a href="#">Download Resume</a>
   </div>
 )
 
