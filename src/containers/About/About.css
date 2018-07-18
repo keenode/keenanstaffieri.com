@@ -1,15 +1,15 @@
-.PageContainer {
+.pageContainer {
   padding: 0 var(--grid-padding);
   margin: 0 auto;
   width: 100%;
   max-width: var(--grid-max-width);
 }
 
-.PageContainer h1 {
+.pageContainer h1 {
   text-align: right;
 }
 
-.Story {
+.story {
   padding-left: 15%;
   width: 50%;
   font-size: 20px;

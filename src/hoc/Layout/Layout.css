@@ -1,18 +1,15 @@
-.AppContainer {
-}
-
-.LayoutContainer {
+.layoutContainer {
   margin-top: 100px;
 }
 
-.Header {
+.header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
 }
 
-.HeaderContainer {
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,16 +19,16 @@
   max-width: var(--grid-max-width);
 }
 
-.Logo {
+.logo {
   display: inline-block;
 }
 
-.Logo svg {
+.logo svg {
   width: 100px;
   height: 100px;
 }
 
-.Footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;

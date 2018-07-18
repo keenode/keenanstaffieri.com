@@ -1,4 +1,4 @@
-.NavItem a {
+.navItem a {
   padding: 15px;
   margin: 0 10px;
   color: var(--color-white);
@@ -12,10 +12,10 @@
   user-select: none;
 }
 
-.NavItem:last-child a {
+.navItem:last-child a {
   margin-right: 0;
 }
 
-.NavItem a.active {
+.navItem a.active {
   opacity: 1;
 }

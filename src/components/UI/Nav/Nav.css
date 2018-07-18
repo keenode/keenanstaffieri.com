@@ -1,8 +1,8 @@
-.Nav {
+.nav {
   position: relative;
   right: -20px;
 }
 
-.NavList {
+.navList {
   display: flex;
 }

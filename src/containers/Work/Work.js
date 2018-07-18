@@ -9,20 +9,20 @@ import styles from './Work.css'
  */
 
 const work = () => (
-  <div className={styles.PageContainer}>
+  <div className={styles.pageContainer}>
     <h1>My Work</h1>
-    <article className={styles.WorkItem}>
+    <article className={styles.workItem}>
       {/* Picture element will go here */}
-      <div className={styles.WorkPicture}></div>
-      <div className={styles.WorkBox}>
+      <div className={styles.workPicture}></div>
+      <div className={styles.workBox}>
         <h3>VIZIO.com</h3>
         <a className="btn" href="https://www.vizio.com/" target="_blank" rel="noopener noreferrer">Visit Site</a>
       </div>
     </article>
-    <article className={[styles.WorkItem, styles.WorkItem_Left].join(' ')}>
+    <article className={[styles.workItem, styles.workItem_left].join(' ')}>
       {/* Picture element will go here */}
-      <div className={styles.WorkPicture}></div>
-      <div className={styles.WorkBox}>
+      <div className={styles.workPicture}></div>
+      <div className={styles.workBox}>
         <h3>VIZIO.com</h3>
         <a className="btn" href="https://www.vizio.com/" target="_blank" rel="noopener noreferrer">Visit Site</a>
       </div>

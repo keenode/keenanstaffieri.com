@@ -3,9 +3,9 @@ import React from 'react'
 import styles from './About.css'
 
 const about = () => (
-  <div className={styles.PageContainer}>
+  <div className={styles.pageContainer}>
     <h1>About Me</h1>
-    <article className={styles.Story}>
+    <article className={styles.story}>
       <p>My name is Keenan Staffieri. I am passionate about...</p>
       <p>Velit fugiat duis sit fugiat aute velit sit enim aliquip do est duis quis.</p>
       <p>Exercitation irure non sint velit mollit Lorem proident culpa duis labore. Id incididunt cillum laborum veniam exercitation est officia. Minim culpa voluptate consectetur labore et proident aute anim commodo laborum non ut. Occaecat adipisicing aliqua culpa tempor laborum ex cillum proident aute sint. Aliqua est deserunt anim incididunt nisi laborum amet consectetur labore fugiat mollit. Id reprehenderit exercitation id dolore velit.</p>

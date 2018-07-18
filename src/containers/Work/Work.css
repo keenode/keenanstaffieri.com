@@ -1,36 +1,36 @@
-.PageContainer {
+.pageContainer {
   padding: 0 var(--grid-padding);
   margin: 0 auto;
   width: 100%;
   max-width: var(--grid-max-width);
 }
 
-.PageContainer h1 {
+.pageContainer h1 {
   text-align: right;
 }
 
-.WorkItem {
+.workItem {
   position: relative;
   margin: 0 auto 200px auto;
   width: 100%;
 }
 
-.WorkItem_Left .WorkBox {
+.workItem_left .workBox {
   left: 0;
 }
 
-.WorkItem_Left .WorkPicture {
+.workItem_left .workPicture {
   position: relative;
   left: 10%;
 }
 
-.WorkPicture {
+.workPicture {
   width: 90%;
   height: 400px;
   background-color: var(--color-gray);  
 }
 
-.WorkBox {
+.workBox {
   position: absolute;
   right: 0;
   bottom: -100px;

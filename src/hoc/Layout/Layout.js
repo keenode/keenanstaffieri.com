@@ -10,19 +10,19 @@ import styles from './Layout.css';
 class Layout extends Component {
   render () {
     return (
-      <div className={styles.AppContainer}>
-        <header className={styles.Header}>
-            <div className={styles.HeaderContainer}>
+      <div className={styles.appContainer}>
+        <header className={styles.header}>
+          <div className={styles.headerContainer}>
             <NavLink to="/">
-              <SVGInline className={styles.Logo} svg={ksLogo} />
+              <SVGInline className={styles.logo} svg={ksLogo} />
             </NavLink>
             <Nav />
           </div>
         </header>
-        <main className={styles.LayoutContainer}>
+        <main className={styles.layoutContainer}>
           {this.props.children}
         </main>
-        <footer className={styles.Footer}>
+        <footer className={styles.footer}>
           <small>&copy; Copyright 2018 Keenan Staffieri.</small>
         </footer>
       </div>
