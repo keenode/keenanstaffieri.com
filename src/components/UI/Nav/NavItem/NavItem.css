@@ -3,13 +3,16 @@
   margin: 0 10px;
   color: var(--color-white);
   font-family: var(--fontFamily-sans-serif);
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 20px;
   letter-spacing: 2px;
   text-decoration: none;
   opacity: 0.6;
-  transition: opacity 300ms ease;
+  transition: opacity 200ms ease;
   user-select: none;
+}
+
+.navItem a:hover {
+  opacity: 0.8;
 }
 
 .navItem:last-child a {

@@ -3,8 +3,12 @@ import React from 'react'
 import styles from './Work.css'
 
 /*
+ * Space Shooter
+ * Roguelike
  * VIZIO.com
  * WeAreEnvoy
+ * The Honest Kitchen
+ * Mitchell & Ness
  * Elo Touch
  */
 

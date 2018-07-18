@@ -63,10 +63,8 @@ table {
   --color-purple: #893168;
 
   /* Fonts */
-  --fontFamily-serif: 'Alice', serif;
-  --fontFamily-sans-serif: 'Kanit', sans-serif;
-  --fontFamily-base: var(--fontFamily-sans-serif);
-  --fontFamily-headings: var(--fontFamily-serif);
+  --fontFamily-base: 'Kanit', sans-serif;
+  --fontFamily-headings: 'Cantarell', serif;
 
   /* Grid */
   --grid-max-width: 1400px;
@@ -101,7 +99,7 @@ h6 {
 h1 {
   margin-bottom: 30px;
   font-size: 80px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 
 p {
