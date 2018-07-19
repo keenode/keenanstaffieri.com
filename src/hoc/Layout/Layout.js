@@ -10,6 +10,7 @@ import Nav from '../../components/UI/Nav/Nav'
 import ksLogo from '../../assets/svgs/ks-logo.svg'
 import githubIcon from '../../assets/svgs/github.svg'
 import linkedinIcon from '../../assets/svgs/linkedin.svg'
+import codepenIcon from '../../assets/svgs/codepen.svg'
 
 import styles from './Layout.css';
 
@@ -32,6 +33,9 @@ class Layout extends Component {
           <div className={styles.socialMediaContainer}>
             <a href="https://github.com/keenode" target="_blank" rel="noopener noreferrer">
               <SVGInline className={styles.socialMediaIcon} svg={githubIcon} />
+            </a>
+            <a href="https://codepen.io/keenode/" target="_blank" rel="noopener noreferrer">
+              <SVGInline className={styles.socialMediaIcon} svg={codepenIcon} />
             </a>
             <a href="https://www.linkedin.com/in/kstaffieri" target="_blank" rel="noopener noreferrer">
               <SVGInline className={styles.socialMediaIcon} svg={linkedinIcon} />

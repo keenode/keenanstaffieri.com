@@ -10,6 +10,7 @@ import styles from './Work.css'
  * The Honest Kitchen
  * Mitchell & Ness
  * Elo Touch
+ * Ascensus
  */
 
 const work = () => (
