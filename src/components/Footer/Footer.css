@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  color: var(--color-gray-light);
+  letter-spacing: 1px;
+  background-color: var(--color-black);
+  text-align: center;
+}
+
+.socialMediaIcon svg {
+  fill: var(--color-white);
+  margin: 0 5px;
+  width: 32px;
+}
