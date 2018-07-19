@@ -8,35 +8,3 @@
 .pageContainer h1 {
   text-align: right;
 }
-
-.workItem {
-  position: relative;
-  margin: 0 auto 200px auto;
-  width: 100%;
-}
-
-.workItem_left .workBox {
-  left: 0;
-}
-
-.workItem_left .workPicture {
-  position: relative;
-  left: 10%;
-}
-
-.workPicture {
-  width: 90%;
-  height: 400px;
-  background-color: var(--color-gray);  
-}
-
-.workBox {
-  position: absolute;
-  right: 0;
-  bottom: -100px;
-  padding: 30px;
-  width: 30%;
-  height: 400px;
-  background-color: var(--color-orange);
-  box-sizing: border-box;
-}
