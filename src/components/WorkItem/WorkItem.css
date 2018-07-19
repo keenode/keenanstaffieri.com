@@ -1,6 +1,6 @@
 .workItem {
   position: relative;
-  margin: 0 auto 200px auto;
+  margin: 0 auto 250px auto;
   width: 100%;
 }
 
@@ -15,7 +15,7 @@
 
 .workPicture {
   width: 90%;
-  height: 400px;
+  height: 500px;
   background-color: var(--color-gray);  
 }
 
@@ -28,4 +28,18 @@
   height: 400px;
   background-color: var(--color-orange);
   box-sizing: border-box;
+}
+
+.workBox_Heading {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.button {
+  padding: 20px 30px;
+  color: var(--color-white);
+  font-family: var(--fontFamily-headings);
+  font-size: 20px;
+  background-color: var(--color-blue);
+  text-decoration: none;
 }

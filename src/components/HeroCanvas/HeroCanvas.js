@@ -71,9 +71,7 @@ class HeroCanvas extends Component {
 
   render() {
     return (
-      <section className={styles.heroCanvas}>
-        <div id="hero-canvas"></div>
-      </section>
+      <section id="hero-canvas" className={styles.heroCanvas}></section>
     )
   }
 }

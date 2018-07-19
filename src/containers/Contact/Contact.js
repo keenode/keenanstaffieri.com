@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import styles from './Contact.css'
 
-const contact = () => (
-  <div className={styles.pageContainer}>
-    <h1>Contact</h1>
-    <p>[contact form goes here]</p>
-  </div>
-)
+class Contact extends Component {
+  submitHandler(e) {
+    e.preventDefault()
+    console.log('[submitHandler]')
+  }
 
-export default contact
+  render() {
+    return (
+      <div className={styles.pageContainer}>
+        <h1>Contact</h1>
+        <form className={styles.contactForm} onSubmit={this.submitHandler}>
+          <div className={styles.contactForm_Row}>
+            <input name="your-name" placeholder="Your Name" />
+          </div>
+          <div className={styles.contactForm_Row}>
+            <input name="your-email" placeholder="Your Email" />
+          </div>
+          <div className={styles.contactForm_Row}>
+            <textarea name="your-message" placeholder="Your Message" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    )
+  }
+}
+
+export default Contact
