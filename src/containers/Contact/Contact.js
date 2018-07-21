@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import HeadingCanvas from '../../components/HeadingCanvas/HeadingCanvas'
+
 import styles from './Contact.css'
 
 class Contact extends Component {
@@ -11,7 +13,7 @@ class Contact extends Component {
   render() {
     return (
       <div className={styles.pageContainer}>
-        <h1>Contact</h1>
+        <HeadingCanvas text="Contact" />
         <form className={styles.contactForm} onSubmit={this.submitHandler}>
           <div className={styles.contactForm_Row}>
             <input name="your-name" placeholder="Your Name" />

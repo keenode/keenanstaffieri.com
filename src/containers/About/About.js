@@ -1,10 +1,12 @@
 import React from 'react'
 
+import HeadingCanvas from '../../components/HeadingCanvas/HeadingCanvas'
+
 import styles from './About.css'
 
 const about = () => (
   <div className={styles.pageContainer}>
-    <h1>About Me</h1>
+    <HeadingCanvas text="About Me" />
     <article className={styles.story}>
       <p>My name is Keenan Staffieri. I am passionate about...</p>
       <p>Velit fugiat duis sit fugiat aute velit sit enim aliquip do est duis quis.</p>

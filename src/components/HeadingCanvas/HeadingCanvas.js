@@ -23,8 +23,8 @@ class HeadingCanvas extends Component {
       width: $heroCanvas.offsetWidth,
       height: $heroCanvas.offsetHeight,
       transparent: true,
-      // resolution: 2,
-      // autoResize: true,
+      resolution: window.devicePixelRatio,
+      autoResize: true,
       // antialias: true
     })
     this.headingApp.renderer.autoResize = true
@@ -40,10 +40,10 @@ class HeadingCanvas extends Component {
     const style = new PIXI.TextStyle({
       fontFamily: '"Cantarell", serif',
       fontSize: 80,
-      fill: 'white'
+      fill: '#FCF7FF'
     })
     this.headingText = new PIXI.Text(this.props.text, style)
-    this.headingText.pivot.set(-this.headingApp.renderer.width + this.headingText.width, 0)
+    this.headingText.pivot.set(-this.headingApp.renderer.width / window.devicePixelRatio + this.headingText.width, 0)
     this.headingApp.stage.addChild(this.headingText)
   }
 

@@ -7,7 +7,6 @@ import styles from './Work.css'
 
 const work = () => (
   <div className={styles.pageContainer}>
-    <h1>My Work</h1>
     <HeadingCanvas text="My Work" />
     <WorkItem
       title="Project: Space Shooter"
