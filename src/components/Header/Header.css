@@ -8,7 +8,7 @@
 
 .headerContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0 var(--grid-padding);
   margin: 0 auto;
