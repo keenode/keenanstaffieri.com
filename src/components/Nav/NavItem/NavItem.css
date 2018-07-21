@@ -5,20 +5,17 @@
   font-family: var(--fontFamily-sans-serif);
   font-size: 20px;
   letter-spacing: 2px;
+  background-color: var(--color-black);
   text-decoration: none;
-  opacity: 0.6;
   transition: opacity 200ms ease;
   user-select: none;
 }
 
 .navItem a:hover {
-  opacity: 0.8;
 }
 
 .navItem:last-child a {
-  margin-right: 0;
 }
 
 .navItem a.active {
-  opacity: 1;
 }

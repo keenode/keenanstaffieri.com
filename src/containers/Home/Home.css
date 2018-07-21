@@ -10,3 +10,48 @@
 .pageContainer h1 {
   text-align: right;
 }
+
+.pageBorders {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 20;
+
+  --borderWidth: 50px;
+}
+
+.pageBorders > span {
+  position: absolute;
+  background-color: var(--color-black);
+}
+
+.pageBorder_Top {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--borderWidth);
+}
+
+.pageBorder_Right {
+  right: 0;
+  top: var(--borderWidth);
+  width: var(--borderWidth);
+  height: calc(100% - var(--borderWidth));
+}
+
+.pageBorder_Bottom {
+  left: 0;
+  bottom: 0;
+  width: calc(100% - var(--borderWidth));
+  height: var(--borderWidth);
+}
+
+.pageBorder_Left {
+  left: 0;
+  top: var(--borderWidth);
+  width: var(--borderWidth);
+  height: calc(100% - var(--borderWidth) * 2);
+}
