@@ -1,0 +1,19 @@
+.pageContainer {
+}
+
+.heroLogoGraphic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-shadow: -20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.socialMediaIcon svg {
+  fill: var(--color-white);
+  margin: 0 10px;
+  width: 64px;
+}
