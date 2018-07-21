@@ -2,16 +2,22 @@
   position: relative;
   width: 100%;
   padding: 10px 0;
-  color: var(--color-gray-light);
+  color: var(--color-cement);
   letter-spacing: 1px;
   text-align: center;
+  opacity: 0.5;
+  transition: opacity 300ms ease;
   z-index: 20;
 }
 
+.footer:hover {
+  opacity: 1;
+}
+
 .footerIsHome {
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 }
 
 .socialMediaIcon svg {
