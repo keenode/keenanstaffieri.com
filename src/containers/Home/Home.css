@@ -55,3 +55,21 @@
   width: var(--borderWidth);
   height: calc(100% - var(--borderWidth) * 2);
 }
+
+.heroLogoGraphic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.heroContent {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  text-align: right;
+}

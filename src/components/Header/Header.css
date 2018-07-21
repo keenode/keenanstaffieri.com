@@ -16,6 +16,10 @@
   max-width: var(--grid-max-width);
 }
 
+.headerIsHome .headerContainer {
+  justify-content: flex-end;
+}
+
 .logoGraphic {
   width: 100px;
   height: 80px;
