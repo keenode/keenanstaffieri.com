@@ -15,6 +15,7 @@ const header = props => {
       <div className={styles.logoGraphic} style={{ backgroundImage: `url('${ksLogo}')` }}></div>
     </NavLink>
   ) : null
+
   return (
     <header className={[styles.header, isHome ? styles.headerIsHome : null].join(' ')}>
       <div className={styles.headerContainer}>

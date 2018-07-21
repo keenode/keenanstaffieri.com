@@ -7,10 +7,6 @@
   z-index: 20;
 }
 
-.pageContainer h1 {
-  text-align: right;
-}
-
 .pageBorders {
   position: fixed;
   left: 0;
@@ -72,4 +68,10 @@
   top: 0;
   width: 100%;
   text-align: right;
+}
+
+.socialMediaIcon svg {
+  fill: var(--color-white);
+  margin: 0 10px;
+  width: 64px;
 }
