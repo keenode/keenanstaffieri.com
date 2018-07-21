@@ -55,14 +55,14 @@ table {
   /* Colors */
   --color-white: #FCF7FF;
   --color-black: #11151C;
+  --color-brand-gray: #2E2E3A;
+  --color-brand-space: #0A182F;
+  --color-brand-orange: #f05046;
   --color-gray-subtle: #E5E8E7;
   --color-gray-light: #CED1D0;
-  --color-gray: #2E2E3A;
-  --color-space: #0A182F;
   --color-blue: #2374AB;
   --color-blue-slate: #4F5D75;
   --color-cement: #BFC0C0;
-  --color-orange: #f05046;
   --color-purple: #893168;
 
   /* Fonts */

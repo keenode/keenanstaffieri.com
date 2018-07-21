@@ -16,7 +16,7 @@
 .workPicture {
   width: 90%;
   height: 500px;
-  background-color: var(--color-gray);  
+  background-color: var(--color-brand-gray);  
 }
 
 .workBox {
@@ -26,7 +26,7 @@
   padding: 30px;
   width: 30%;
   height: 400px;
-  background-color: var(--color-orange);
+  background-color: var(--color-brand-orange);
   box-sizing: border-box;
 }
 
