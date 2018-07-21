@@ -1,10 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import SVGInline from 'react-svg-inline'
 
 import Nav from '../../components/Nav/Nav'
 
-import ksLogo from '../../assets/svgs/ks-logo.svg'
+import ksLogo from '../../assets/ks-logo.png'
 
 import styles from './Header.css'
 
@@ -12,7 +11,7 @@ const header = props => (
   <header className={styles.header}>
     <div className={styles.headerContainer}>
       <NavLink to="/">
-        <SVGInline className={styles.logo} svg={ksLogo} />
+        <div className={styles.logoGraphic} style={{ backgroundImage: `url('${ksLogo}')` }}></div>
       </NavLink>
       <Nav />
     </div>

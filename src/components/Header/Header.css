@@ -16,6 +16,14 @@
   max-width: var(--grid-max-width);
 }
 
+.logoGraphic {
+  margin-top: 10px;
+  width: 100px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .logo {
   display: inline-block;
   margin-top: 10px;
