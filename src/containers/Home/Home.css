@@ -60,6 +60,7 @@
   height: 400px;
   background-repeat: no-repeat;
   background-size: 100%;
+  box-shadow: -20px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .heroContent {
