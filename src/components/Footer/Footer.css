@@ -14,13 +14,13 @@
   opacity: 1;
 }
 
-/* @media screen and (min-height: 550px) {
+@media screen and (min-height: 550px) {
   .footerIsHome {
     position: absolute;
     left: 0;
     bottom: 0;
   }
-} */
+}
 
 .socialMediaIcon svg {
   fill: var(--color-white);
