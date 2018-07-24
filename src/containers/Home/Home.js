@@ -23,8 +23,8 @@ const home = () => (
       <div className={styles.heroLogoGraphic} style={{ backgroundImage: `url('${ksLogo}')` }}></div>
       <div className={styles.heroContent}>
         <HeadingCanvas text="Keenan Staffieri" />
-        <h3>Frontend Developer</h3>
-        <p>Always Learning.</p>
+        <h3 className={styles.subHeading}>Frontend Developer</h3>
+        <p className={styles.tagline}>Always <span>Learning</span>.</p>
         <div className={styles.socialMediaContainer}>
           <a href="https://github.com/keenode" target="_blank" rel="noopener noreferrer">
             <SVGInline className={styles.socialMediaIcon} svg={githubIcon} />

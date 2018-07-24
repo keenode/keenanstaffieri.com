@@ -16,7 +16,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 20;
 
-  --borderWidth: 50px;
+  --borderWidth: 10px;
 }
 
 .pageBorders > span {
@@ -55,9 +55,9 @@
 .heroLogoGraphic {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 500px;
-  height: 400px;
+  top: 22px;
+  width: 450px;
+  height: 360px;
   background-repeat: no-repeat;
   background-size: 100%;
   box-shadow: -20px 20px 0 rgba(0, 0, 0, 0.2);
@@ -69,6 +69,22 @@
   top: 0;
   width: 100%;
   text-align: right;
+}
+
+.subHeading {
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.tagline {
+  font-size: 36px;
+  user-select: none;
+}
+
+.tagline span {
+  font-style: italic;
 }
 
 .socialMediaIcon svg {
