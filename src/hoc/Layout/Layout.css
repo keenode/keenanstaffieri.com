@@ -1,12 +1,5 @@
 .layoutContainer {
-  overflow: hidden;
+  position: relative;
+  margin-top: 25vh;
+  z-index: 10;
 }
-/* .layoutContainer {
-  margin-top: 50px;
-}
-
-@media screen and (min-width: 480px) {
-  .layoutContainer {
-    margin-top: 150px;
-  }
-} */
