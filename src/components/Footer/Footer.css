@@ -1,5 +1,5 @@
 .footer {
-  position: relative;
+  position: absolute;
   width: 100%;
   padding: 10px 0;
   color: var(--color-cement);
@@ -16,7 +16,6 @@
 
 @media screen and (min-height: 550px) {
   .footerIsHome {
-    position: absolute;
     left: 0;
     bottom: 10px;
   }

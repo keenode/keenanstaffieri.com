@@ -1,4 +1,7 @@
 .layoutContainer {
+  overflow: hidden;
+}
+/* .layoutContainer {
   margin-top: 50px;
 }
 
@@ -6,4 +9,4 @@
   .layoutContainer {
     margin-top: 150px;
   }
-}
+} */

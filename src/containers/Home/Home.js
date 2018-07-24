@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import SVGInline from 'react-svg-inline'
 
-import HeroCanvas from '../../components/HeroCanvas/HeroCanvas'
 import HeadingCanvas from '../../components/HeadingCanvas/HeadingCanvas'
 
 import ksLogo from '../../assets/ks-logo.png'
@@ -38,7 +37,6 @@ const home = () => (
         </div>
       </div>
     </div>
-    <HeroCanvas />
   </Fragment>
 )
 
