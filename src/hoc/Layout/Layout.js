@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Header from '../../components/Header/Header'
 import GameCanvas from '../../components/GameCanvas/GameCanvas'
+import HullDash from '../../components/UI/HullDash/HullDash'
+import LogsPanel from '../../components/UI/LogsPanel/LogsPanel'
 import Footer from '../../components/Footer/Footer'
 
 import * as actions from '../../store/actions'
@@ -19,7 +21,10 @@ class Layout extends Component {
         </main>
         <GameCanvas
           playerShip={this.props.playerShip}
-          gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) } />
+          gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
+          notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
+        <LogsPanel logs={this.props.logs} />
+        <HullDash playerShip={this.props.playerShip} />
         <Footer />
       </div>
     )
@@ -28,13 +33,15 @@ class Layout extends Component {
 
 const mapStateToProps = state => {
   return {
-    playerShip: state.playerShip
+    playerShip: state.playerShip,
+    logs: state.logs.notifications
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onGameloopPlayerShipUpdate: data => dispatch(actions.gameloopPlayerShipUpdate(data))
+    onGameloopPlayerShipUpdate: data => dispatch(actions.gameloopPlayerShipUpdate(data)),
+    onAddNotification: (notification, type) => dispatch(actions.addNotification(notification, type))
   }
 }
 

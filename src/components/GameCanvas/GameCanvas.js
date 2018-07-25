@@ -168,11 +168,17 @@ class GameCanvas extends Component {
       if (this.playerShip.data.shields < 0) {
         this.playerShip.data.shields = 0
       }
-      if (dmgDiff < 0) {
+      if (dmgDiff >= 0) {
+        this.props.notificationReported(`Shields absorbed ${dmgAmt} damage!`, 'shieldsDamaged')
+      } else {
+        const shieldsDamageAmt = dmgDiff + dmgAmt
+        this.props.notificationReported(`Shields absorbed ${shieldsDamageAmt} damage!`, 'shieldsDamaged')
+        this.props.notificationReported(`Hull took ${Math.abs(dmgDiff)} damage!`, 'hullDamaged')
         this.playerShip.data.hull += dmgDiff
       }
     } else {
       this.playerShip.data.hull -= dmgAmt
+      this.props.notificationReported(`Hull took ${dmgAmt} damage!`, 'hullDamaged')
     }
 
     if (this.playerShip.data.hull < 0) {
@@ -244,6 +250,7 @@ class GameCanvas extends Component {
 
     // Check for player death
     if (!this.props.playerShip.isAlive && !this.playerDeadReported) {
+      this.props.notificationReported('Your ship has been destroyed!', 'playerShipDestroyed')
       this.playerDeadReported = true
 
       const hitSfx = new Howl({
@@ -262,6 +269,7 @@ class GameCanvas extends Component {
 
     // Report no fuel if tank is empty!
     if (this.props.playerShip.fuel <= 0 && !this.playerNoFuelReported) {
+      this.props.notificationReported('You ran out of fuel!', 'noFuel')
       this.playerNoFuelReported = true
     }
 

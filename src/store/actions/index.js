@@ -13,3 +13,5 @@ export {
   setIsLateralThrustingRight,
   setIsFiringWeapon
 } from './playerShip'
+
+export { addNotification } from './logs'

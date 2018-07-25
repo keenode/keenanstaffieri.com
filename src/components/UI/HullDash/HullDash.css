@@ -1,0 +1,368 @@
+.HullDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 400px);
+  bottom: 15px;
+  width: 800px;
+  font-family: var(--ui-dash-font-family);
+  z-index: 10;
+}
+
+.HullStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 50, 50, 0.5);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.5) inset;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+}
+
+.FuelMeterTickContainer {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 50%;
+  transform-origin: center bottom;
+}
+
+.FuelMeterTick {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  background-color: yellow;
+  opacity: 0.5;
+}
+
+.FuelMeter_LineContainer {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 50%;
+  transform-origin: center bottom;
+}
+
+.FuelMeter_Line {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  height: 30%;
+  background-color: #c8007b;
+  box-shadow: -2px 3px 0 rgba(200, 0, 123, 0.4);
+}
+
+.FuelFractionDisplay {
+  position: absolute;
+  bottom: 5%;
+}
+
+.FuelFractionDisplay span {
+  display: block;
+  text-align: center;
+  user-select: none;
+}
+
+.FuelAmount {
+  font-size: 14px;
+  border-bottom: 2px solid  rgba(0, 150, 150, 0.5);
+}
+
+.FuelMaxAmount {
+  color: #c4f1ff;
+  font-size: 12px;
+}
+
+.HullGraphic {
+  width: 0;
+  height: 0;
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-right: 23px solid rgba(0, 255, 255, 0.5);
+  transform: rotate(90deg) scaleX(2);
+}
+
+.HullGraphicContainer {
+  position: relative;
+  top: -10px;
+}
+
+.Indicator_Thrust {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: calc(50% - 22.5px);
+  bottom: -26px;
+  width: 45px;
+}
+
+.Indicator_Thrust span {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid yellow;
+}
+
+.Indicator_Brakes {
+  position: absolute;
+  left: calc(50% - 22.5px);
+  bottom: -9px;
+  width: 45px;
+  height: 4px;
+  background-color: red;
+  opacity: 0.8;
+}
+
+.Indicator_LateralThrust_Left {
+  position: absolute;
+  right: -25px;
+  top: 15px;
+  width: 0; 
+  height: 0; 
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 12px solid yellow;
+}
+
+.Indicator_LateralThrust_Right {
+  position: absolute;
+  left: -25px;
+  top: 15px;
+  width: 0; 
+  height: 0; 
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent; 
+  border-right: 12px solid yellow; 
+}
+
+.Indicator_Weapons {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 5px;
+  top: -21px;
+  width: 14px;
+  opacity: 0.8;
+}
+
+.Indicator_Weapons span {
+  width: 2px;
+  height: 18px;
+  background-color: red;
+}
+
+.DashCenter {
+  width: 350px;
+}
+
+.HullVitals {
+  padding: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.VitalsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.VitalsRow_Energy {
+  margin-bottom: 0;
+  height: 16px;
+}
+
+.VitalsBar {
+  position: relative;
+  width: 85%;
+  height: 24px;
+  background-color: #111;
+}
+
+.VitalsBar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.VitalsBar_Fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 100ms ease-in;
+  transform-origin: left center;
+  will-change: transform;
+}
+
+.VitalsBar_Shields .VitalsBar_Fill {
+  background-color: #40c2ff;
+}
+
+.VitalsBar_Hull .VitalsBar_Fill {
+  background-color: #56f356;
+}
+
+.VitalsBar_Energy {
+  height: 16px;
+}
+
+.VitalsBar_Energy .VitalsBar_Fill {
+  background-color: #f0f356;
+}
+
+.VitalsLabel {
+  padding-right: 5px;
+  width: 15%;
+  font-size: 18px;
+  text-align: right;
+  user-select: none;
+}
+
+.VitalsLabel_Energy {
+  font-size: 14px;
+}
+
+.ExpansionBays {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ExpansionBay {
+  flex: 1;
+  padding: 4px;
+  color: #ccc;
+  user-select: none;
+}
+
+.ExpansionBay span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Speedometer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 50, 50, 0.5);
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.5) inset;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+}
+
+.SpeedometerTickContainer {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 50%;
+  transform-origin: center bottom;
+}
+
+.SpeedometerTick {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  background-color: yellow;
+  opacity: 0.5;
+}
+
+.TickLabel {
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 12px;
+  width: 30px;
+  color: #c4f1ff;
+  font-size: 13px;
+  text-align: center;
+  user-select: none;
+}
+
+.Speedometer_LineContainer {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 50%;
+  transform-origin: center bottom;
+  transition: transform 100ms ease-in-out;
+}
+
+.Speedometer_Line {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 40%;
+  background-color: cyan;
+  box-shadow: -2px 3px 0 rgba(0, 200, 200, 0.4);
+}
+
+.SpeedDisplay {
+  color: white;
+  font-size: 32px;
+  user-select: none;
+}
+
+.SpeedDisplay span {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.ModeDisplay {
+  position: absolute;
+  left: 55%;
+  bottom: 40px;
+  width: 20px;
+  font-size: 16px;
+  text-align: center;
+  user-select: none;
+}
+
+.RotationGuage {
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 50, 50, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+}
+
+.RotationGuage_Stick {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform-origin: center bottom;
+}
+
+.RotationDisplay {
+  color: #c4f1ff;
+  font-size: 12px;
+  user-select: none;
+}
