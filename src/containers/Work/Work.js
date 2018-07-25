@@ -11,13 +11,6 @@ const work = () => (
   <div className={styles.pageContainer}>
     <HeadingCanvas text="My Work" />
 
-    {/* <WorkItem
-      title="Project:<br> Space Shooter"
-      buttons={[{
-        url: 'https://www.vizio.com/',
-        text: 'Visit Site'
-      }]} /> */}
-
     <WorkItem
       title="Project:<br> Roguelike"
       buttons={[{
