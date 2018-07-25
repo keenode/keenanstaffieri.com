@@ -16,7 +16,7 @@
 .workPicture {
   width: 90%;
   height: 500px;
-  background-color: var(--color-brand-gray);  
+  background-color: var(--color-brand-gray);
 }
 
 .workBox {
@@ -42,4 +42,13 @@
   font-size: 20px;
   background-color: var(--color-blue);
   text-decoration: none;
+}
+
+:global(.animated) {
+  opacity: 0;
+  transition: opacity 1000ms ease;
+}
+
+.fadeInMe {
+  opacity: 1;
 }

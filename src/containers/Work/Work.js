@@ -8,6 +8,7 @@ import styles from './Work.css'
 const work = () => (
   <div className={styles.pageContainer}>
     <HeadingCanvas text="My Work" />
+
     <WorkItem
       title="Project: Space Shooter"
       buttons={[{
@@ -37,7 +38,7 @@ const work = () => (
         text: 'Visit Site'
       }]}
       alignLeft />
-      
+
       <WorkItem
         title="The Honest Kitchen"
         buttons={[{

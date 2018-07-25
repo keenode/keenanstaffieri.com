@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { connect } from 'react-redux'
 
 import Header from '../../components/Header/Header'
@@ -14,19 +15,21 @@ import styles from './Layout.css';
 class Layout extends Component {
   render () {
     return (
-      <div className={styles.appContainer}>
-        <Header />
-        <main className={styles.layoutContainer}>
-          {this.props.children}
-        </main>
-        <GameCanvas
-          playerShip={this.props.playerShip}
-          gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
-          notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
-        <LogsPanel logs={this.props.logs} />
-        <HullDash playerShip={this.props.playerShip} />
-        <Footer />
-      </div>
+      <ParallaxProvider>
+        <div className={styles.appContainer}>
+          <Header />
+          <main className={styles.layoutContainer}>
+            {this.props.children}
+          </main>
+          <GameCanvas
+            playerShip={this.props.playerShip}
+            gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
+            notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
+          <LogsPanel logs={this.props.logs} />
+          <HullDash playerShip={this.props.playerShip} />
+          <Footer />
+        </div>
+      </ParallaxProvider>
     )
   }
 }
