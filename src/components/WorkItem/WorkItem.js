@@ -20,7 +20,7 @@ const workItem = props => (
           slowerScrollRate
       >
         <div className={styles.workBox}>
-          <h3 className={styles.workBox_Heading}>{props.title}</h3>
+          <h3 className={styles.workBox_Heading} dangerouslySetInnerHTML={{ __html: props.title }}></h3>
           {props.buttons.map((button, index) => (
             <a key={index} className={styles.button} href={button.url} target="_blank" rel="noopener noreferrer">
               {button.text}

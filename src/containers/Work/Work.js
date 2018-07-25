@@ -5,19 +5,21 @@ import WorkItem from '../../components/WorkItem/WorkItem'
 
 import styles from './Work.css'
 
+// TODO: Add back to top
+
 const work = () => (
   <div className={styles.pageContainer}>
     <HeadingCanvas text="My Work" />
 
-    <WorkItem
-      title="Project: Space Shooter"
+    {/* <WorkItem
+      title="Project:<br> Space Shooter"
       buttons={[{
         url: 'https://www.vizio.com/',
         text: 'Visit Site'
-      }]} />
+      }]} /> */}
 
     <WorkItem
-      title="Project: Roguelike"
+      title="Project:<br> Roguelike"
       buttons={[{
         url: 'https://www.weareenvoy.com/',
         text: 'Visit Site'
