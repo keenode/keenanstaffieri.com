@@ -147,12 +147,12 @@ const hullDash = props => {
             </span>
           </div>
         </div>
-        <ul className={styles.ExpansionBays}>
+        {/* <ul className={styles.ExpansionBays}>
           <li className={styles.ExpansionBay}><span>1</span></li>
           <li className={styles.ExpansionBay}><span>2</span></li>
           <li className={styles.ExpansionBay}><span>3</span></li>
           <li className={styles.ExpansionBay}><span>4</span></li>
-        </ul>
+        </ul> */}
       </div>
       <div className={styles.Speedometer}>
         {speedometerTicks}
