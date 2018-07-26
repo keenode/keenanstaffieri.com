@@ -24,7 +24,9 @@ class Contact extends Component {
           <div className={styles.contactForm_Row}>
             <textarea name="your-message" placeholder="Your Message" />
           </div>
-          <button type="submit">Submit</button>
+          <div className={styles.contactForm_Row} style={{ textAlign: 'right' }}>
+            <button className={styles.submitButton} type="submit">Submit</button>
+          </div>
         </form>
       </div>
     )
