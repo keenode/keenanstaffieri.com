@@ -6,3 +6,23 @@
 .navList {
   display: flex;
 }
+
+.resumeButton {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  margin-left: 10px;
+  padding: 10px 20px;
+  height: 100%;
+  color: var(--color-brand-orange);
+  font-size: 14px;
+  line-height: 14px;
+  /* font-weight: 700; */
+  letter-spacing: 2px;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-brand-orange);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+}

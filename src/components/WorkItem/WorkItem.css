@@ -54,6 +54,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  user-select: none;
 }
 
 /* :global(.animated) {
