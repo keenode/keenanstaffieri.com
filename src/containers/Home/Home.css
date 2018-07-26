@@ -71,23 +71,30 @@
 }
 
 .subHeading {
-  font-size: 50px;
+  margin-bottom: 10px;
+  color: var(--color-brand-orange);
+  font-size: 44px;
+  line-height: 56px;
   letter-spacing: 1px;
   text-transform: uppercase;
   user-select: none;
 }
 
 .tagline {
+  margin-bottom: 50px;
+  color: var(--color-cement);
   font-size: 36px;
+  line-height: 40px;
   user-select: none;
 }
 
 .tagline span {
+  color: var(--color-white);
   font-style: italic;
 }
 
 .socialMediaIcon svg {
   fill: var(--color-white);
   margin: 0 10px;
-  width: 64px;
+  width: 50px;
 }
