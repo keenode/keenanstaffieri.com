@@ -71,7 +71,7 @@ table {
   --fontFamily-gameDash: 'Audiowide', monospace;
 
   /* Grid */
-  --grid-max-width: 1400px;
+  --grid-max-width: 1600px;
   --grid-padding: 20px;
 }
 
@@ -89,7 +89,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--fontFamily-headings);
 }
 

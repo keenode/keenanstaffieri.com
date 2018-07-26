@@ -21,12 +21,12 @@ class Layout extends Component {
           <main className={styles.layoutContainer}>
             {this.props.children}
           </main>
-          <GameCanvas
+          {/* <GameCanvas
             playerShip={this.props.playerShip}
             gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
             notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
           <LogsPanel logs={this.props.logs} />
-          <HullDash playerShip={this.props.playerShip} />
+          <HullDash playerShip={this.props.playerShip} /> */}
           <Footer />
         </div>
       </ParallaxProvider>

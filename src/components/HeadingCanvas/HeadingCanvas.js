@@ -39,7 +39,7 @@ class HeadingCanvas extends Component {
   addHeading() {
     const style = new PIXI.TextStyle({
       fontFamily: '"Cantarell", serif',
-      fontSize: 80,
+      fontSize: 100,
       fill: '#FCF7FF'
     })
     this.headingText = new PIXI.Text(this.props.text, style)

@@ -1,7 +1,8 @@
 .workItem {
   position: relative;
-  margin: 0 auto 250px auto;
+  margin: 250px auto 500px auto;
   width: 100%;
+  max-width: 1200px;
 }
 
 .workItem_left .workBox {
@@ -19,35 +20,40 @@
 .workPicture {
   position: relative;
   width: 90%;
-  height: 500px;
+  height: 550px;
   background-color: var(--color-brand-gray);
 }
 
 .workBox {
   position: absolute;
   right: 0;
-  bottom: -100px;
-  padding: 30px;
-  width: 30%;
-  height: 400px;
-  background-color: var(--color-brand-orange);
+  bottom: -50px;
+  padding: 50px;
+  width: 35%;
+  min-height: 250px;
+  background-color: var(--color-white);
   box-sizing: border-box;
 }
 
 .workBox_Heading {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: var(--color-black);
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 48px;
+  line-height: 56px;
 }
 
 .button {
-  padding: 20px 30px;
-  color: var(--color-white);
-  font-family: var(--fontFamily-headings);
+  display: block;
+  padding: 15px 25px;
+  max-width: 200px;
+  color: var(--color-brand-orange);
   font-size: 20px;
-  background-color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 3px solid var(--color-brand-orange);
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* :global(.animated) {
