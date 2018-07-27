@@ -4,6 +4,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: var(--grid-max-width);
+  box-sizing: border-box;
   z-index: 20;
 }
 
@@ -53,7 +54,7 @@
 
 .heroLogoGraphic {
   position: absolute;
-  left: 0;
+  left: var(--grid-padding);
   top: 22px;
   width: 450px;
   height: 360px;
@@ -64,9 +65,9 @@
 
 .heroContent {
   position: absolute;
-  right: 0;
+  right: var(--grid-padding);
   top: 0;
-  width: 100%;
+  width: 60%;
   text-align: right;
 }
 

@@ -3,6 +3,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: var(--grid-max-width);
+  box-sizing: border-box;
 }
 
 .pageContainer h1 {
