@@ -14,12 +14,11 @@
   margin-left: 10px;
   padding: 10px 20px;
   height: 100%;
-  color: var(--color-brand-orange);
+  color: var(--color-blue-light);
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 2px;
-  background-color: var(--color-black);
-  border: 1px solid var(--color-brand-orange);
+  border: 1px solid var(--color-blue-light);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
