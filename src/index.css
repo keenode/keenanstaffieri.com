@@ -54,6 +54,7 @@ table {
 :root {
   /* Colors */
   --color-white: #FCF7FF;
+  --color-off-white: #dae8fd;
   --color-black: #11151C;
   --color-brand-gray: #2E2E3A;
   --color-brand-space: #0A182F;
@@ -114,4 +115,8 @@ p {
 
 small {
   font-size: 75%;
+}
+
+b {
+  font-weight: 700;
 }

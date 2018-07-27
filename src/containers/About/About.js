@@ -9,7 +9,7 @@ const about = () => (
     <HeadingCanvas text="About Me" />
     <div className={styles.storyContainer}>
       <article className={styles.story}>
-        <p>My name is Keenan Staffieri. I am passionate about...</p>
+        <p>My name is <b>Keenan Staffieri</b>. I am passionate about...</p>
         <p>Velit fugiat duis sit fugiat aute velit sit enim aliquip do est duis quis.</p>
         <p>Exercitation irure non sint velit mollit Lorem proident culpa duis labore. Id incididunt cillum laborum veniam exercitation est officia. Minim culpa voluptate consectetur labore et proident aute anim commodo laborum non ut. Occaecat adipisicing aliqua culpa tempor laborum ex cillum proident aute sint. Aliqua est deserunt anim incididunt nisi laborum amet consectetur labore fugiat mollit. Id reprehenderit exercitation id dolore velit.</p>
         <p>Eiusmod sint ad dolore est. Irure elit officia culpa officia. Exercitation ut ullamco eiusmod laborum cillum ut incididunt. Pariatur occaecat nulla veniam est elit. Est deserunt ea officia est ea in voluptate in nostrud veniam. Elit ex ea amet ex duis enim nostrud laborum aliquip. Laborum sit eu nostrud occaecat do fugiat velit reprehenderit dolor.</p>

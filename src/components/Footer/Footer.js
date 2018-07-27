@@ -13,7 +13,8 @@ import styles from './Footer.css'
 
 const footer = props => {
   const isHome = props.location.pathname === '/'
-  const socialMediaIcons = !isHome ? (
+
+  const socialMediaIcons = (
     <div className={styles.socialMediaContainer}>
       <a href="https://github.com/keenode" target="_blank" rel="noopener noreferrer">
         <SVGInline className={styles.socialMediaIcon} svg={githubIcon} />
@@ -25,7 +26,7 @@ const footer = props => {
         <SVGInline className={styles.socialMediaIcon} svg={linkedinIcon} />
       </a>
     </div>
-  ) : null
+  )
 
   return (
     <footer className={[styles.footer, isHome ? styles.footerIsHome : null].join(' ')}>

@@ -1,11 +1,11 @@
 .navItem a {
   display: inline-block;
   position: relative;
-  padding: 15px 25px;
-  margin: 0 5px;
-  color: var(--color-gray-light);
-  font-family: var(--fontFamily-sans-serif);
-  font-size: 18px;
+  padding: 13px 25px;
+  margin: 0 7px;
+  color: var(--color-off-white);
+  font-size: 16px;
+  /* font-weight: 700; */
   letter-spacing: 1.5px;
   background-color: rgb(17, 21, 28, 0.7);
   text-decoration: none;

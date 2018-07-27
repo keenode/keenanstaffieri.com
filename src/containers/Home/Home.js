@@ -26,7 +26,7 @@ const home = () => (
           <h3 className={styles.subHeading}>Frontend Developer</h3>
           <p className={styles.tagline}>Always <span>Learning</span>.</p>
         </div>
-        <div className={styles.socialMediaContainer}>
+        {/* <div className={styles.socialMediaContainer}>
           <a href="https://github.com/keenode" target="_blank" rel="noopener noreferrer">
             <SVGInline className={styles.socialMediaIcon} svg={githubIcon} />
           </a>
@@ -36,7 +36,7 @@ const home = () => (
           <a href="https://www.linkedin.com/in/kstaffieri" target="_blank" rel="noopener noreferrer">
             <SVGInline className={styles.socialMediaIcon} svg={linkedinIcon} />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   </Fragment>

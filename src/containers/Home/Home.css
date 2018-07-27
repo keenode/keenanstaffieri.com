@@ -1,7 +1,7 @@
 .pageContainer {
   position: relative;
   padding: 0 var(--grid-padding);
-  margin: 0 auto;
+  margin: 25vh auto 0 auto;
   width: 100%;
   max-width: var(--grid-max-width);
   box-sizing: border-box;
@@ -55,7 +55,7 @@
 .heroLogoGraphic {
   position: absolute;
   left: calc(var(--grid-padding) + 6%);
-  top: 22px;
+  top: 10px;
   width: 405px;
   height: 324px;
   background-repeat: no-repeat;
