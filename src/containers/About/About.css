@@ -10,8 +10,17 @@
   text-align: right;
 }
 
+.storyContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 0 250px 0;
+}
+
 .story {
-  padding-left: 15%;
-  width: 50%;
+  padding: 50px;
+  width: 80%;
+  color: var(--color-black);
   font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
 }
