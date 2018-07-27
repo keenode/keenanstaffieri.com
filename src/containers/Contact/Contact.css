@@ -10,16 +10,26 @@
   text-align: right;
 }
 
+.contactFormContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 0 250px 0;
+}
+
 .contactForm {
-  padding-left: 10%;
-  margin-top: 75px;
-  margin-bottom: 100px;
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  padding: 50px;
+  background-color: rgb(17, 21, 28, 0.7);
+  box-sizing: border-box;
 }
 
 .contactForm_Row {
   margin-bottom: 30px;
+  max-width: 80%;
+}
+
+.contactForm_Row:last-child {
+  margin-bottom: 0;
 }
 
 .contactForm_Row input,
@@ -42,7 +52,7 @@
   display: inline-flex;
   align-self: center;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 50px;
   height: 100%;
   color: var(--color-blue-light);
   font-size: 14px;

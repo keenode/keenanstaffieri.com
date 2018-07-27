@@ -14,20 +14,22 @@ class Contact extends Component {
     return (
       <div className={styles.pageContainer}>
         <HeadingCanvas text="Contact" />
-        <form className={styles.contactForm} onSubmit={this.submitHandler}>
-          <div className={styles.contactForm_Row}>
-            <input name="your-name" placeholder="Your Name" />
-          </div>
-          <div className={styles.contactForm_Row}>
-            <input name="your-email" placeholder="Your Email" />
-          </div>
-          <div className={styles.contactForm_Row}>
-            <textarea name="your-message" placeholder="Your Message" />
-          </div>
-          <div className={styles.contactForm_Row} style={{ textAlign: 'right' }}>
-            <button className={styles.submitButton} type="submit">Submit</button>
-          </div>
-        </form>
+        <div className={styles.contactFormContainer}>
+          <form className={styles.contactForm} onSubmit={this.submitHandler}>
+            <div className={styles.contactForm_Row}>
+              <input name="your-name" placeholder="Your Name" />
+            </div>
+            <div className={styles.contactForm_Row}>
+              <input name="your-email" placeholder="Your Email" />
+            </div>
+            <div className={styles.contactForm_Row}>
+              <textarea name="your-message" placeholder="Your Message" />
+            </div>
+            <div className={styles.contactForm_Row} style={{ textAlign: 'right' }}>
+              <button className={styles.submitButton} type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
