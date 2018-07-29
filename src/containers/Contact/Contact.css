@@ -59,7 +59,7 @@
   font-weight: 700;
   line-height: 14px;
   letter-spacing: 2px;
-  background-color: var(--color-black);
+  background-color: transparent;
   border: 1px solid var(--color-blue-light);
   text-align: center;
   text-decoration: none;
