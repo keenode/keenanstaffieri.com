@@ -16,7 +16,7 @@ class Layout extends Component {
   render () {
     return (
       <ParallaxProvider>
-        <div className={styles.appContainer}>
+        <div id="top" className={styles.appContainer}>
           <Header />
           <main className={styles.layoutContainer}>
             {this.props.children}
