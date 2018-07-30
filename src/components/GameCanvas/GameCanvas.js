@@ -21,6 +21,7 @@ const sceneBounds = {
 }
 
 class GameCanvas extends Component {
+  $gameCanvas = null
   camera = null
   scene = new PIXI.Container()
   sceneBg = new PIXI.Container()
@@ -75,13 +76,21 @@ class GameCanvas extends Component {
       })
       atmosphereSfx.play()
     })
+
+    document.addEventListener('scroll', () => {
+      let opacity = 1 - window.pageYOffset / 3000
+      if (opacity < 0) {
+        opacity = 0
+      }
+      this.$gameCanvas.style.opacity = opacity
+    })
   }
 
   setupPIXI(canvasSelectorId) {
-    const $gameCanvas = document.getElementById(canvasSelectorId)
+    this.$gameCanvas = document.getElementById(canvasSelectorId)
     this.gameApp = new PIXI.Application({
-      width: $gameCanvas.offsetWidth,
-      height: $gameCanvas.offsetHeight,
+      width: this.$gameCanvas.offsetWidth,
+      height: this.$gameCanvas.offsetHeight,
       antialias: true
     })
     this.gameApp.renderer.backgroundColor = 0x0a182f
@@ -89,7 +98,7 @@ class GameCanvas extends Component {
     document.getElementById(canvasSelectorId).appendChild(this.gameApp.view)
 
     window.onresize = () => {
-      this.gameApp.renderer.resize($gameCanvas.offsetWidth, $gameCanvas.offsetHeight)
+      this.gameApp.renderer.resize(this.$gameCanvas.offsetWidth, this.$gameCanvas.offsetHeight)
     }
 
     // Add FPS counter

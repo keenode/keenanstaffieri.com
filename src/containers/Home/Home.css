@@ -55,9 +55,9 @@
 .heroLogoGraphic {
   position: absolute;
   left: calc(var(--grid-padding) + 6%);
-  top: 10px;
-  width: 405px;
-  height: 324px;
+  top: 15px;
+  width: 364.5px;
+  height: 291.6px;
   background-repeat: no-repeat;
   background-size: 100%;
   box-shadow: -20px 20px 0 rgba(0, 0, 0, 0.2);

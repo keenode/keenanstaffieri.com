@@ -11,7 +11,7 @@ import styles from './Header.css'
 
 class Header extends Component {
   state = {
-    isFixed: true
+    isFixed: false
   }
 
   componentDidMount() {
