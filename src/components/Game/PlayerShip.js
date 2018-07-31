@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js'
-import { Howl } from 'howler'
+// import { Howl } from 'howler'
 
 const shipWidth = 48
 const shipHeight = 48
@@ -28,7 +28,7 @@ class PlayerShip {
   shieldsRegenReadyTime = 100.0
   shieldsRegenReadyTimer = 0
   weaponFireTimer = 0
-  thrustSfx = new Howl({ src: ['assets/audio/fx/thrusters.wav'] })
+  // thrustSfx = new Howl({ src: ['assets/audio/fx/thrusters.wav'] })
   thrustsSfxIsPlaying = false
   // facingAngle = 0
 
@@ -183,11 +183,11 @@ class PlayerShip {
         this.data.fuel = 0
       }
       if (!this.thrustsSfxIsPlaying) {
-        this.thrustSfx.play()
+        // this.thrustSfx.play()
         this.thrustsSfxIsPlaying = true
       }
     } else {
-      this.thrustSfx.stop()
+      // this.thrustSfx.stop()
       this.thrustsSfxIsPlaying = false
     }
   }
@@ -201,11 +201,11 @@ class PlayerShip {
       }
       this.weaponFireTimer = 0
 
-      const laserSfx = new Howl({
-        src: ['assets/audio/fx/laser.wav'],
-        volume: 0.3
-      })
-      laserSfx.play()
+      // const laserSfx = new Howl({
+      //   src: ['assets/audio/fx/laser.wav'],
+      //   volume: 0.3
+      // })
+      // laserSfx.play()
     } else {
       this.data.isFiringWeapon = false
     }
@@ -229,11 +229,11 @@ class PlayerShip {
     if (this.data.hull <= 0) {
       this.PIXIContainer.alpha = 0.25
       if (this.data.isAlive) {
-        const hitSfx = new Howl({
-          src: ['assets/audio/fx/explode.wav'],
-          volume: 0.5
-        })
-        hitSfx.play()
+        // const hitSfx = new Howl({
+        //   src: ['assets/audio/fx/explode.wav'],
+        //   volume: 0.5
+        // })
+        // hitSfx.play()
       }
       this.data.isThrusting = false
       this.data.isLateralThrustingLeft = false

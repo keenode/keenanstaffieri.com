@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import * as PIXI from 'pixi.js'
-import { Howl } from 'howler'
+// import { Howl } from 'howler'
 
 import { collisionTest } from '../Game/Utility'
 
@@ -54,7 +54,7 @@ class GameCanvas extends Component {
     this.setupPIXI('game-canvas')
     // Load images
     PIXI.loader.add([
-      'assets/images/projectiles/projectile.png',
+      // 'assets/images/projectiles/projectile.png',
       'assets/images/stars/star.png',
       'assets/images/stars/star-fuzzier.png',
       'assets/images/stardust/stardust-1.png',
@@ -66,17 +66,17 @@ class GameCanvas extends Component {
       this.setupScene()
       // TODO: Make switch
       // this.placeEntities()
-      this.camera = new Camera(this.scene, null, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
-      // this.camera = new Camera(this.scene, this.playerShip.PIXIContainer, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
+      this.playerShip = new PlayerShip(this.props.playerShip, sceneBounds) // TEMP
+      this.camera = new Camera(this.scene, this.playerShip.PIXIContainer, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
       this.gameApp.ticker.add(delta => this.gameLoop(delta))
 
       // Play atmosphere SFX
-      const atmosphereSfx = new Howl({
-        src: ['assets/audio/fx/atmosphere.flac'],
-        loop: true,
-        volume: 0.3
-      })
-      atmosphereSfx.play()
+      // const atmosphereSfx = new Howl({
+      //   src: ['assets/audio/fx/atmosphere.flac'],
+      //   loop: true,
+      //   volume: 0.3
+      // })
+      // atmosphereSfx.play()
     })
 
     document.addEventListener('scroll', () => {
@@ -207,11 +207,11 @@ class GameCanvas extends Component {
         this.damagePlayerShip(Math.floor(Math.random() * 25) + 50)
         this.playerShip.shieldsRegenIsReady = false
 
-        const hitSfx = new Howl({
-          src: ['assets/audio/fx/explode.wav'],
-          volume: 0.3
-        })
-        hitSfx.play()
+        // const hitSfx = new Howl({
+        //   src: ['assets/audio/fx/explode.wav'],
+        //   volume: 0.3
+        // })
+        // hitSfx.play()
       }
 
       // Check enemy collision with player projectiles
@@ -221,11 +221,11 @@ class GameCanvas extends Component {
           projectile.isAlive = false
           enemy.isAlive = false
 
-          const hitSfx = new Howl({
-            src: ['assets/audio/fx/explode.wav'],
-            volume: 0.3
-          })
-          hitSfx.play()
+          // const hitSfx = new Howl({
+          //   src: ['assets/audio/fx/explode.wav'],
+          //   volume: 0.3
+          // })
+          // hitSfx.play()
         }
       }
 
@@ -245,19 +245,19 @@ class GameCanvas extends Component {
         this.damagePlayerShip(Math.floor(Math.random() * 15) + 5)
         this.playerShip.shieldsRegenIsReady = false
 
-        const hitSfx = new Howl({
-          src: ['assets/audio/fx/hit.wav'],
-          volume: 0.2
-        })
-        hitSfx.play()
+        // const hitSfx = new Howl({
+        //   src: ['assets/audio/fx/hit.wav'],
+        //   volume: 0.2
+        // })
+        // hitSfx.play()
       }
     }
   }
 
   gameLoop(delta) {
     // Update player ship data from store with updated data from gameloop
-    // this.playerShip.update(this.props.playerShip, delta)
-    // this.props.gameloopPlayerShipUpdated(this.playerShip.data)
+    this.playerShip.update(this.props.playerShip, delta)
+    this.props.gameloopPlayerShipUpdated(this.playerShip.data)
 
     // Check for player death
     // if (!this.props.playerShip.isAlive && !this.playerDeadReported) {

@@ -21,10 +21,10 @@ class Layout extends Component {
           <main className={styles.layoutContainer}>
             {this.props.children}
           </main>
-          <GameCanvas />
-            {/* playerShip={this.props.playerShip}
+          <GameCanvas
+            playerShip={this.props.playerShip}
             gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
-            notificationReported={ (message, type) => this.props.onAddNotification(message, type) } /> */}
+            notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
           {/* <LogsPanel logs={this.props.logs} /> */}
           {/* <HullDash playerShip={this.props.playerShip} /> */}
           <span className={styles.bgOverlay}></span>
