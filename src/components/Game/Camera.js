@@ -17,8 +17,8 @@ class Camera {
   }
 
   update(delta) {
-    this.scene.x = -this.trackingEntity.x + this.renderer.width / 2
-    this.scene.y = -this.trackingEntity.y + this.renderer.height / 2
+    // this.scene.x = -this.trackingEntity.x + this.renderer.width / 2
+    // this.scene.y = -this.trackingEntity.y + this.renderer.height / 2
     for (let d = 0; d < this.starDustBgs.length; d++) {
       this.starDustBgs[d].PIXIContainer.x = this.scene.x * starDustBgsParallaxAmt * (d + 1)
       this.starDustBgs[d].PIXIContainer.y = this.scene.y * starDustBgsParallaxAmt * (d + 1)

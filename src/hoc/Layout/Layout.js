@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 
 import Header from '../../components/Header/Header'
 import GameCanvas from '../../components/GameCanvas/GameCanvas'
-import HullDash from '../../components/UI/HullDash/HullDash'
-import LogsPanel from '../../components/UI/LogsPanel/LogsPanel'
+// import HullDash from '../../components/UI/HullDash/HullDash'
+// import LogsPanel from '../../components/UI/LogsPanel/LogsPanel'
 import Footer from '../../components/Footer/Footer'
 
 import * as actions from '../../store/actions'
@@ -21,10 +21,10 @@ class Layout extends Component {
           <main className={styles.layoutContainer}>
             {this.props.children}
           </main>
-          <GameCanvas
-            playerShip={this.props.playerShip}
+          <GameCanvas />
+            {/* playerShip={this.props.playerShip}
             gameloopPlayerShipUpdated={ data => this.props.onGameloopPlayerShipUpdate(data) }
-            notificationReported={ (message, type) => this.props.onAddNotification(message, type) } />
+            notificationReported={ (message, type) => this.props.onAddNotification(message, type) } /> */}
           {/* <LogsPanel logs={this.props.logs} /> */}
           {/* <HullDash playerShip={this.props.playerShip} /> */}
           <span className={styles.bgOverlay}></span>

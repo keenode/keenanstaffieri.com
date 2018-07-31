@@ -7,7 +7,7 @@ import { collisionTest } from '../Game/Utility'
 import Camera from '../Game/Camera'
 import PlayerShip from '../Game/PlayerShip'
 import EnemyShip from '../Game/EnemyShip'
-import Projectile from '../Game/Projectile'
+// import Projectile from '../Game/Projectile'
 import StarFieldBG from '../Game/StarFieldBG'
 import StarDustBG from '../Game/StarDustBG'
 
@@ -64,8 +64,10 @@ class GameCanvas extends Component {
     ]).load(() => {
       console.log('Textures loaded into PIXI.')
       this.setupScene()
-      this.placeEntities()
-      this.camera = new Camera(this.scene, this.playerShip.PIXIContainer, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
+      // TODO: Make switch
+      // this.placeEntities()
+      this.camera = new Camera(this.scene, null, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
+      // this.camera = new Camera(this.scene, this.playerShip.PIXIContainer, this.gameApp.renderer, this.starFieldBGs, this.starDustBgs.data)
       this.gameApp.ticker.add(delta => this.gameLoop(delta))
 
       // Play atmosphere SFX
@@ -254,79 +256,79 @@ class GameCanvas extends Component {
 
   gameLoop(delta) {
     // Update player ship data from store with updated data from gameloop
-    this.playerShip.update(this.props.playerShip, delta)
-    this.props.gameloopPlayerShipUpdated(this.playerShip.data)
+    // this.playerShip.update(this.props.playerShip, delta)
+    // this.props.gameloopPlayerShipUpdated(this.playerShip.data)
 
     // Check for player death
-    if (!this.props.playerShip.isAlive && !this.playerDeadReported) {
-      this.props.notificationReported('Your ship has been destroyed!', 'playerShipDestroyed')
-      this.playerDeadReported = true
+    // if (!this.props.playerShip.isAlive && !this.playerDeadReported) {
+    //   this.props.notificationReported('Your ship has been destroyed!', 'playerShipDestroyed')
+    //   this.playerDeadReported = true
 
-      const hitSfx = new Howl({
-        src: ['assets/audio/fx/explode.wav'],
-        volume: 0.5
-      })
-      hitSfx.play()
-    }
+    //   const hitSfx = new Howl({
+    //     src: ['assets/audio/fx/explode.wav'],
+    //     volume: 0.5
+    //   })
+    //   hitSfx.play()
+    // }
 
     // Spawn projectiles if player is firing weapon
-    if (this.props.playerShip.isFiringWeapon) {
-      const projectile = new Projectile(this.playerShip)
-      this.playerProjectiles.data.push(projectile)
-      this.playerProjectiles.container.addChild(projectile.PIXIContainer)
-    }
+    // if (this.props.playerShip.isFiringWeapon) {
+    //   const projectile = new Projectile(this.playerShip)
+    //   this.playerProjectiles.data.push(projectile)
+    //   this.playerProjectiles.container.addChild(projectile.PIXIContainer)
+    // }
 
     // Report no fuel if tank is empty!
-    if (this.props.playerShip.fuel <= 0 && !this.playerNoFuelReported) {
-      this.props.notificationReported('You ran out of fuel!', 'noFuel')
-      this.playerNoFuelReported = true
-    }
+    // if (this.props.playerShip.fuel <= 0 && !this.playerNoFuelReported) {
+    //   this.props.notificationReported('You ran out of fuel!', 'noFuel')
+    //   this.playerNoFuelReported = true
+    // }
 
     // Handle enemy updates
-    for (let b = 0; b < this.enemies.data.length; b++) {
-      const enemy = this.enemies.data[b]
-      enemy.update(delta)
-      if (enemy.nextAttackElapsed >= enemy.nextAttackTimer) {
-        const projectile = new Projectile(enemy)
-        this.enemyProjectiles.data.push(projectile)
-        this.enemyProjectiles.container.addChild(projectile.PIXIContainer)
-        enemy.nextAttackElapsed = 0
-        enemy.nextAttackTimer = Math.random() * 175.0 + 25.0
+    // for (let b = 0; b < this.enemies.data.length; b++) {
+    //   const enemy = this.enemies.data[b]
+    //   enemy.update(delta)
+    //   if (enemy.nextAttackElapsed >= enemy.nextAttackTimer) {
+    //     const projectile = new Projectile(enemy)
+    //     this.enemyProjectiles.data.push(projectile)
+    //     this.enemyProjectiles.container.addChild(projectile.PIXIContainer)
+    //     enemy.nextAttackElapsed = 0
+    //     enemy.nextAttackTimer = Math.random() * 175.0 + 25.0
 
-        // const laserSfx = new Howl({
-        //   src: ['assets/audio/fx/laser.wav'],
-        //   volume: 0.1
-        // })
-        // laserSfx.play()
-      }
-    }
+    //     // const laserSfx = new Howl({
+    //     //   src: ['assets/audio/fx/laser.wav'],
+    //     //   volume: 0.1
+    //     // })
+    //     // laserSfx.play()
+    //   }
+    // }
 
     // Handle player projectile updates
-    for (let p = 0; p < this.playerProjectiles.data.length; p++) {
-      const projectile = this.playerProjectiles.data[p]
-      projectile.update(delta)
-      // TODO: Current logic causing weird positoning stutter upon removal
-      if (!projectile.isAlive) {
-        this.playerProjectiles.data.splice(p, 1)
-        this.playerProjectiles.container.removeChildAt(p)
-      }
-    }
+    // for (let p = 0; p < this.playerProjectiles.data.length; p++) {
+    //   const projectile = this.playerProjectiles.data[p]
+    //   projectile.update(delta)
+    //   // TODO: Current logic causing weird positoning stutter upon removal
+    //   if (!projectile.isAlive) {
+    //     this.playerProjectiles.data.splice(p, 1)
+    //     this.playerProjectiles.container.removeChildAt(p)
+    //   }
+    // }
 
     // Handle enemy projectile updates
-    for (let p = 0; p < this.enemyProjectiles.data.length; p++) {
-      const projectile = this.enemyProjectiles.data[p]
-      projectile.update(delta)
-      // TODO: Current logic causing weird positoning stutter upon removal
-      if (!projectile.isAlive) {
-        this.enemyProjectiles.data.splice(p, 1)
-        this.enemyProjectiles.container.removeChildAt(p)
-      }
-    }
+    // for (let p = 0; p < this.enemyProjectiles.data.length; p++) {
+    //   const projectile = this.enemyProjectiles.data[p]
+    //   projectile.update(delta)
+    //   // TODO: Current logic causing weird positoning stutter upon removal
+    //   if (!projectile.isAlive) {
+    //     this.enemyProjectiles.data.splice(p, 1)
+    //     this.enemyProjectiles.container.removeChildAt(p)
+    //   }
+    // }
 
-    if (this.playerShip.data.isAlive) {
-      this.checkForCollisions()
-      this.checkForPlayerCollisions()
-    }
+    // if (this.playerShip.data.isAlive) {
+    //   this.checkForCollisions()
+    //   this.checkForPlayerCollisions()
+    // }
 
     // Update stardust
     for (let d = 0; d < this.starDustBgs.data.length; d++) {
