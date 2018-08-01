@@ -37,7 +37,7 @@ class PlayerShip {
     this.weaponFireTimer = this.data.weaponFireRate
     this.sceneBounds = sceneBounds
     this.PIXIContainer.x = sceneBounds.width / 2
-    this.PIXIContainer.y = sceneBounds.height - shipHeight / 2 - shipBottomPadding
+    this.PIXIContainer.y = sceneBounds.height / 2 //- shipHeight / 2 - shipBottomPadding
     this.gfxThrusting.addChild(this.drawThrustingForce(180))
     this.gfxThrusting.position.y = 47
     this.gfxThrusting.visible = false
@@ -63,6 +63,9 @@ class PlayerShip {
     this.PIXIContainer.addChild(this.draw())
     document.addEventListener('keydown', this.handleKeyDown.bind(this), false)
     document.addEventListener('keyup', this.handleKeyUp.bind(this), false)
+
+    this.data.rotation = Math.random() * Math.PI * 2
+    this.PIXIContainer.rotation = this.data.rotation
   }
 
   handleKeyDown(e) {
@@ -242,6 +245,52 @@ class PlayerShip {
       this.data.isReversing = false
       this.data.isRequestingToFireWeapon = false
       this.data.isAlive = false
+    }
+  }
+
+  updateSimple(playerShipProps, delta) {
+    this.data.speed = Math.sqrt(this.data.velocity.y * this.data.velocity.y + this.data.velocity.x * this.data.velocity.x)
+
+    if (this.data.speed < 1.0) {
+      this.data.velocity.x += this.data.thrustPower * Math.cos(this.PIXIContainer.rotation - offsetAngle)
+      this.data.velocity.y += this.data.thrustPower * Math.sin(this.PIXIContainer.rotation - offsetAngle)
+    }
+
+    // Bounds checking
+    if (this.PIXIContainer.x + this.data.velocity.x < 0) {
+      this.data.velocity.x = 0
+      this.data.velocity.y = 0
+      this.PIXIContainer.x = 0
+      this.PIXIContainer.rotation = Math.random() * Math.PI * 2
+    } else if (this.PIXIContainer.x + this.data.velocity.x > this.sceneBounds.width) {
+      this.data.velocity.x = 0
+      this.data.velocity.y = 0
+      this.PIXIContainer.x = this.sceneBounds.width
+      this.PIXIContainer.rotation = Math.random() * Math.PI * 2
+    } else if (this.PIXIContainer.y + this.data.velocity.y < 0) {
+      this.data.velocity.x = 0
+      this.data.velocity.y = 0
+      this.PIXIContainer.y = 0
+      this.PIXIContainer.rotation = Math.random() * Math.PI * 2
+    } else if (this.PIXIContainer.y + this.data.velocity.y > this.sceneBounds.height) {
+      this.data.velocity.x = 0
+      this.data.velocity.y = 0
+      this.PIXIContainer.y = this.sceneBounds.height
+      this.PIXIContainer.rotation = Math.random() * Math.PI * 2
+    } else {
+      // Update position
+      this.PIXIContainer.rotation += this.data.rotationalVelocity * delta
+      this.PIXIContainer.x += this.data.velocity.x * delta
+      this.PIXIContainer.y += this.data.velocity.y * delta
+      this.data.position.x = this.PIXIContainer.x
+      this.data.position.y = this.PIXIContainer.y
+      this.data.rotation = this.PIXIContainer.rotation
+    }
+
+    // Update local data
+    this.data = {
+      ...playerShipProps,
+      ...this.data
     }
   }
 

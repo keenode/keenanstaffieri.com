@@ -104,17 +104,17 @@ class GameCanvas extends Component {
     }
 
     // Add FPS counter
-    const style = new PIXI.TextStyle({
-      fontFamily: '"Audiowide", monospace',
-      fontSize: 20,
-      fill: 'cyan'
-    })
-    this.fpsText = new PIXI.Text('', style)
-    this.fpsText.x = 15
-    this.fpsText.y = 15
+    // const style = new PIXI.TextStyle({
+    //   fontFamily: '"Audiowide", monospace',
+    //   fontSize: 20,
+    //   fill: 'cyan'
+    // })
+    // this.fpsText = new PIXI.Text('', style)
+    // this.fpsText.x = 15
+    // this.fpsText.y = 15
 
     this.gameApp.stage.addChild(this.scene)
-    this.gameApp.stage.addChild(this.fpsText)
+    // this.gameApp.stage.addChild(this.fpsText)
   }
 
   setupScene() {
@@ -256,7 +256,7 @@ class GameCanvas extends Component {
 
   gameLoop(delta) {
     // Update player ship data from store with updated data from gameloop
-    this.playerShip.update(this.props.playerShip, delta)
+    this.playerShip.updateSimple(this.props.playerShip, delta)
     this.props.gameloopPlayerShipUpdated(this.playerShip.data)
 
     // Check for player death
@@ -339,7 +339,7 @@ class GameCanvas extends Component {
     this.camera.update(delta)
 
     // Update FPS text
-    this.fpsText.text = Math.round(this.gameApp.ticker.FPS) + ' FPS'
+    // this.fpsText.text = Math.round(this.gameApp.ticker.FPS) + ' FPS'
   }
 
   render() {
