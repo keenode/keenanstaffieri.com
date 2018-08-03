@@ -37,7 +37,7 @@ class StarFieldBG {
 
   addStarSrite(starSprite) {
     const color = starColors[Math.floor(Math.random() * starColors.length)]
-    const scale = Math.random() * 1
+    const scale = Math.random() * 0.5;
     starSprite.width = (starSprite.width / 2) * scale
     starSprite.height = (starSprite.height / 2) * scale
     starSprite.x = Math.floor(Math.random() * this.sceneBounds.width)
@@ -52,7 +52,7 @@ class StarFieldBG {
       const color = starColors[Math.floor(Math.random() * starColors.length)]
       const xPos = Math.floor(Math.random() * this.sceneBounds.width)
       const yPos = Math.floor(Math.random() * this.sceneBounds.height)
-      let radius = Math.round((Math.random() * 3 * 100) / this.depth) / 100
+      let radius = Math.round((Math.random() * 2 * 100) / this.depth) / 100
       const alpha = Math.round(Math.random() * 1 * 100) / 100
       if (radius < 1) {
         radius = 1

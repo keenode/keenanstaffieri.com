@@ -16,8 +16,8 @@ import gfxConfig from '../../config/graphics'
 import styles from './GameCanvas.css'
 
 const sceneBounds = {
-  width: 8000,
-  height: 8000
+  width: 4000,
+  height: 4000
 }
 
 class GameCanvas extends Component {
