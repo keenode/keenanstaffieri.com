@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js'
 
 const shipWidth = 48
 const shipHeight = 48
-const shipBottomPadding = 24
+// const shipBottomPadding = 24
 const offsetAngle = 90 * Math.PI / 180
 
 class PlayerShip {
@@ -251,7 +251,7 @@ class PlayerShip {
   updateSimple(playerShipProps, delta) {
     this.data.speed = Math.sqrt(this.data.velocity.y * this.data.velocity.y + this.data.velocity.x * this.data.velocity.x)
 
-    if (this.data.speed < 1.0) {
+    if (this.data.speed < 0.25) {
       this.data.velocity.x += this.data.thrustPower * Math.cos(this.PIXIContainer.rotation - offsetAngle)
       this.data.velocity.y += this.data.thrustPower * Math.sin(this.PIXIContainer.rotation - offsetAngle)
     }
