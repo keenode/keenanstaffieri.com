@@ -66,7 +66,7 @@ class HeadingCanvas extends Component {
     this.surgeTimer += delta
     if (this.surgeTimer > 0) {
       const speed = 10
-    
+
       if (this.displacementSprite.x < 150) {
         let moveAmt = speed - this.surgeTimer * 0.25
         if (moveAmt < 0) {
@@ -79,13 +79,13 @@ class HeadingCanvas extends Component {
       } else {
         // console.log('done')
         this.displacementFilter.enabled = false
-      } 
+      }
     }
   }
 
   render() {
     return (
-      <section id="heading-canvas" className={styles.headingCanvas}></section>
+      <section id="heading-canvas" className={['heading-canvas', styles.headingCanvas].join(' ')}></section>
     )
   }
 }

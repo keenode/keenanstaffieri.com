@@ -10,43 +10,53 @@ import About from './containers/About/About'
 import Contact from './containers/Contact/Contact'
 
 class App extends Component {
+
   onEnter(node) {
     console.log('[onEnter] ', node)
-    TweenMax.fromTo(node, 1, {
-      opacity: 0
-    }, {
-      opacity: 1
-    })
+    if (this.props.location.pathname !== '/') {
+      const headingNode = node.querySelector('.heading-canvas')
+      TweenMax.fromTo(headingNode, 1, {
+        opacity: 0
+      }, {
+        opacity: 1
+      })
+    }
   }
 
   onExit(node) {
     console.log('[onExit] ', node)
-    TweenMax.fromTo(node, 1, {
-      opacity: 1
-    }, {
-      opacity: 0
-    })
+    if (this.props.location.pathname !== '/') {
+      const headingNode = node.querySelector('.heading-canvas')
+      TweenMax.fromTo(headingNode, 1, {
+        opacity: 1
+      }, {
+        opacity: 0
+      })
+    }
   }
 
   render() {
+    console.log(this.props.location.pathname)
     return (
       <Layout>
-        <TransitionGroup key={this.props.location.key} delay={1000}>
-        <Transition
-            key={this.props.location.key}
-            // mountOnEnter
-            // unmountOnExit
-            onEnter={node => this.onEnter(node)}
-            timeout={0}
-            onExit={node => this.onExit(node)}
-            appear
-          >
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/work" exact component={Work} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-            </Switch>
+        <TransitionGroup>
+          <Transition
+              key={this.props.location.key}
+              mountOnEnter
+              unmountOnExit
+              onEnter={node => this.onEnter(node)}
+              onExit={node => this.onExit(node)}
+              timeout={{
+                enter: 1000,
+                exit: 1000
+              }}
+            >
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/work" exact component={Work} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+              </Switch>
           </Transition>
         </TransitionGroup>
       </Layout>
